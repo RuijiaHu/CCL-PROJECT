@@ -7,7 +7,7 @@ let growthRate = 1;
 //ChatGPT
 let circleVisible = true;
 
-let mode = 1;
+let mode = 0;
 
 //explosion
 let m = [];
@@ -42,6 +42,12 @@ function setup() {
 }
 
 function draw() {
+    if (mode == 0) {
+        background(0)
+        fill(255);
+        text("press mouse then press '1' to start", 20, 20);
+    }
+
     if (keyIsPressed) {
         if (key == "1") {
             mode = 1;
